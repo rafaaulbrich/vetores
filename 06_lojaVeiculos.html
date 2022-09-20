@@ -1,0 +1,45 @@
+<script>
+    //Problema: Loja de veículos
+    //Crie os seguintes arrays:
+    // let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    // let cassosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    // let carrosHatch = ["308", "Focus", "i30"];
+    
+    //Peça para o usuário informar mais três veículos para serem inseridos na lista. Para inserir na lista correta,
+    //peça também para o usuário identificar o tipo de veículo que deseja inserir, se é SUV, Sedan ou Hatch.
+
+    //Apresente a lista final de cada tipo de veículo.
+
+    //ENTRADA
+
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    const inserir1 = prompt("informe mais três veículos a serem inseridos").trim();
+    const tipoVeiculo1 = prompt("que tipo de veículo você deseja inserir na lista? SUV || Sedan || Hatch").trim().toUpperCase();
+    const inserir2 = prompt("informe mais três veículos a serem inseridos").trim();
+    const tipoVeiculo2 = prompt("que tipo de veículo você deseja inserir na lista? SUV || Sedan || Hatch").trim().toUpperCase();
+    const inserir3 = prompt("informe mais três veículos a serem inseridos").trim();
+    const tipoVeiculo3 = prompt("que tipo de veículo você deseja inserir na lista? SUV || Sedan || Hatch").trim().toUpperCase();
+
+    //PROCESSAMENTO
+    
+    (tipoVeiculo1 === "SUV") ? carrosSUV.push(inserir1)
+    : (tipoVeiculo1 === "SEDAN") ? carrosSedan.push(inserir1)
+    : carrosHatch.push(inserir1);
+
+    (tipoVeiculo2 === "SUV") ? carrosSUV.push(inserir2)
+    : (tipoVeiculo2 === "SEDAN") ? carrosSedan.push(inserir2)
+    : carrosHatch.push(inserir2);
+
+    (tipoVeiculo3 === "SUV") ? carrosSUV.push(inserir3)
+    : (tipoVeiculo3 === "SEDAN") ? carrosSedan.push(inserir3)
+    : carrosHatch.push(inserir3);
+
+    //SAÍDA
+
+    document.write("Sua lista de SUV é: <br>" + carrosSUV.join("</br>") + "<br>");
+    document.write("Sua lista de Sedan é: <br>" + carrosSedan.join("</br>") + "<br>");
+    document.write("Sua lista de Hatch é: <br>" + carrosHatch.join("</br>") + "<br>");
+    
+</script> 
